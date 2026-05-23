@@ -7,6 +7,8 @@
 /desmume/src/frontend/windows/*.aps
 /desmume/src/frontend/windows/config.mak
 /desmume/src/frontend/windows/desmume.exe
+/desmume/src/frontend/interface/windows/.obj/
+/desmume/src/frontend/interface/windows/__bins/
 .vs/
 *.user
 *.suo
@@ -82,3 +84,12 @@ xcuserdata/
 /config.log
 /.project
 .DS_Store
+
+# Tauri frontend generated files
+/desmume/src/frontend/tauri/node_modules/
+/desmume/src/frontend/tauri/dist/
+/desmume/src/frontend/tauri/src-tauri/target/
+/desmume/src/frontend/tauri/src-tauri/gen/
+/desmume/src/frontend/tauri/src-tauri/.tauri/
+/desmume/src/frontend/tauri/native/build/
+/desmume/src/frontend/tauri/native/bin/

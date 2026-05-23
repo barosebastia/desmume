@@ -121,6 +121,9 @@
     <Filter Include="frontend\posix\shared">
       <UniqueIdentifier>{e29895bf-f6e1-486e-814e-bdf2e1414599}</UniqueIdentifier>
     </Filter>
+    <Filter Include="frontend\tauri">
+      <UniqueIdentifier>{5f3d7eea-c060-41e6-8b04-7bd1dce724b6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\addons\slot2_expMemory.cpp">
@@ -584,6 +587,9 @@
     <ClCompile Include="..\draw_sdl_window.cpp">
       <Filter>frontend\interface</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\tauri\native\desmume_tauri_bridge.cpp">
+      <Filter>frontend\tauri</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\utils\guid.h">
@@ -979,6 +985,9 @@
     </ClInclude>
     <ClInclude Include="..\..\posix\shared\sndsdl.h">
       <Filter>frontend\posix\shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\tauri\native\desmume_tauri_bridge.h">
+      <Filter>frontend\tauri</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,24 @@
+2026-05-23 14:50 - desmume / master
+
+- Analizada la peticion del usuario para implementar un prototipo de interfaz moderna con Tauri y Rust.
+- Comprobado que el proyecto ya tenia Git inicializado, remoto `origin`, rama `master` y archivo `.gitignore`.
+- Anadidas exclusiones en `.gitignore` para artefactos generados por el frontend Tauri y por la build de `frontend/interface/windows`.
+- Anadido el frontend `desmume/src/frontend/tauri` con React, Vite, Tauri v2, backend Rust, permisos de dialogo, icono de Windows y documentacion de uso.
+- Anadido el bridge nativo `desmume/src/frontend/tauri/native/desmume_tauri_bridge.*` para inicializar DeSmuME, abrir ROM, pausar, resetear, enviar input y leer frames RGBA.
+- Integrado el bridge nativo en la build existente de `frontend/interface` mediante Meson y el proyecto Visual Studio de Windows.
+- Instaladas dependencias npm y generados `package-lock.json` y `Cargo.lock` para reproducibilidad.
+- Ejecutado `npm run build`; corregido error de TypeScript 6 cambiando `moduleResolution` a `Bundler`.
+- Corregidos errores TypeScript de `ImageData` y declaracion de assets de Vite.
+- Ejecutado `npm run build` de nuevo con resultado correcto.
+- Ejecutado MSBuild de `DeSmuME_Interface.sln` con Build Tools 2022 en `Release|x64`; la build termino correctamente con avisos existentes del core/JIT.
+- Comprobado con `dumpbin /exports` que la DLL exporta los simbolos `tauri_desmume_*`.
+- Instalado Rust estable minimo en el perfil de usuario sin modificar PATH para poder validar el backend Tauri.
+- Ejecutado `cargo check`; corregido error de lifetime en el helper de bloqueo del estado del emulador.
+- Ejecutado `cargo check` de nuevo con resultado correcto.
+- Ejecutado `npm run tauri build` con resultado correcto y generacion de `src-tauri/target/release/desmume-tauri.exe`.
+- Ampliadas las rutas de busqueda del bridge nativo para cubrir ejecuciones desde `src-tauri/target/release`.
+- Ejecutado `cargo check` final con resultado correcto.
+- Ejecutado `npm run tauri build` final con resultado correcto tras los ultimos ajustes.
+- Anadida preparacion de `PATH` en Windows para que el backend pueda localizar dependencias nativas como `SDL2.dll` al cargar la DLL de interfaz.
+- Ejecutados `cargo check` y `npm run tauri build` de nuevo con resultado correcto.
+- Ejecutado el binario `desmume-tauri.exe` generado durante 5 segundos en modo oculto; arranco correctamente y se detuvo manualmente.

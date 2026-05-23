@@ -58,7 +58,11 @@ includes = include_directories(
   '../../../src/frontend',
 )
 
-libdesmume_src = ['interface.cpp', 'draw_sdl_window.cpp']
+libdesmume_src = [
+  'interface.cpp',
+  'draw_sdl_window.cpp',
+  '../tauri/native/desmume_tauri_bridge.cpp',
+]
 
 libdesmume_src += [
   '../../armcpu.cpp',

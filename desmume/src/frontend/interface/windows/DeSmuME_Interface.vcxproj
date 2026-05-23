@@ -301,8 +301,10 @@
     <ClCompile Include="..\..\windows\winutil.cpp" />
     <ClCompile Include="..\draw_sdl_window.cpp" />
     <ClCompile Include="..\interface.cpp" />
+    <ClCompile Include="..\..\tauri\native\desmume_tauri_bridge.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\tauri\native\desmume_tauri_bridge.h" />
     <ClInclude Include="..\..\..\addons\slot1comp_mc.h" />
     <ClInclude Include="..\..\..\addons\slot1comp_protocol.h" />
     <ClInclude Include="..\..\..\addons\slot1comp_rom.h" />
